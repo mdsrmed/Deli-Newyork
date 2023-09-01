@@ -10,10 +10,40 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            NavigationStack {
+                VStack(spacing: 50) {
+                    Image("logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 300)
+                    
+                    Text("Grocery store at your doorstep")
+                        .font(.custom("Lato-Light", size: 40))
+                        .multilineTextAlignment(.center)
+                    
+                    Text("Experience fresh delights daily")
+                        .font(.custom("Lato-Light",size: 20))
+                        .foregroundColor(.gray)
+                           
+                              
+                  
+                    
+                    Button {
+                        
+                    } label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 50)
+                            Text("Get started")
+                                .foregroundColor(.white)
+                                .bold()
+                        }
+                    }
+                    .frame(width: 300, height: 70)
+                    .foregroundColor(Color.red.opacity(0.6))
+                    
+
+                }
+            }
         }
         .padding()
     }
